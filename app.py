@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return 'Flask Test'
+    return 'Flask Test 2'
     
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
