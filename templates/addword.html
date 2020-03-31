@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h3>Add a new word</h3>
+<div class="row">
+    <form action="{{ url_for('insert_word') }}" method="POST" class="col s12">
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">text_fields</i>
+                <input id="word_name" name="word_name" type="text" class="validate">
+                <label for="word_name">New word name</label>
+            </div>
+        </div>
+        <div class="row">    
+            <div class="input-field col s12">
+                <i class="material-icons prefix">subject</i>
+                <textarea id="word_definition" name="word_definition" class="materialize-textarea"></textarea>
+                <label for="word_definition">Definition</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">list</i>
+                <select id="part_of_speech" name="part_of_speech">
+                  <option value="" disabled selected>Pick a type</option>
+                  {% for part in partofspeech %}
+                      <option value="{{part.part_of_speech}}">{{part.part_of_speech}}</option>
+                  {% endfor %}
+                </select>
+                <label>Part of speech</label>
+            </div>
+        </div>
+        <div class="row">    
+            <div class="input-field col s12">
+                <i class="material-icons prefix">volume_down</i>
+                <textarea id="pronunciation" name="pronunciation" class="materialize-textarea"></textarea>
+                <label for="pronunciation">Pronunciation</label>
+            </div>
+        </div>
+        <div class="row">    
+            <div class="input-field col s12">
+                <i class="material-icons prefix">chat</i>
+                <textarea id="sentence_use" name="sentence_use" class="materialize-textarea"></textarea>
+                <label for="sentence_use">Use it in a sentence</label>
+            </div>
+        </div>
+        <div class="row">    
+            <div class="input-field col s12">
+                <i class="material-icons prefix">account_circle</i>
+                <textarea id="submitter_name" name="submitter_name" class="materialize-textarea"></textarea>
+                <label for="submitter_name">Your nick name</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s3">
+                <button class="btn waves-effect waves-light" type="submit" name="action">Submit your word
+                    <i class="material-icons right">done</i>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

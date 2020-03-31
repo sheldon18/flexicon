@@ -17,9 +17,19 @@ mongo = PyMongo(app)
 @app.route('/')
 @app.route('/home_page')
 def home_page():
-    return render_template("index.html", words=mongo.db.words.find())
+    return render_template("index.html", 
+    words = mongo.db.words.find())
     
+@app.route('/add_word')
+def add_word():
+    return render_template('addword.html',
+    partofspeech=mongo.db.partofspeech.find())
     
+@app.route('/insert_word', methods=['POST'])
+def insert_word():
+    words = mongo.db.words
+    words.insert_one(request.form.to_dict())
+    return redirect(url_for('home_page'))
     
     
 if __name__ == '__main__':
