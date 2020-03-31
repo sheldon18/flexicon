@@ -31,6 +31,31 @@ def insert_word():
     words.insert_one(request.form.to_dict())
     return redirect(url_for('home_page'))
     
+@app.route('/edit_word/<word_id>')
+def edit_word(word_id):
+    the_word = mongo.db.words.find_one({"_id": ObjectId(word_id)})
+    all_partofspeech = mongo.db.partofspeech.find()
+    return render_template('editword.html', word=the_word, partofspeech=all_partofspeech)
+    
+@app.route('/update_word/<word_id>', methods=["POST"])
+def update_word(word_id):
+    words = mongo.db.words
+    words.update( {'_id': ObjectId(word_id)},
+    {
+        'word_name':request.form.get('word_name'),
+        'part_of_speech':request.form.get('part_of_speech'),
+        'word_definition':request.form.get('word_definition'),
+        'pronunciation':request.form.get('pronunciation'),
+        'sentence_use':request.form.get('sentence_use'),
+        'submitter_name':request.form.get('submitter_name')
+    })
+    return redirect(url_for('home_page'))
+
+@app.route('/delete_word/<word_id>')
+def delete_word(word_id):
+    mongo.db.words.remove({'_id': ObjectId(word_id)})
+    return redirect(url_for('home_page'))
+
     
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),

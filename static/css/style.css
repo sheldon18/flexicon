@@ -1,0 +1,15 @@
+body {
+    background-color: white;
+}
+
+.btn_small {
+    height: 24px;
+    width: 60px;
+    line-height: 24px;
+    margin: 5px 5px;
+    padding: 0 0.5em;
+}
+
+.word_header {
+    margin-top: 5px;
+}
