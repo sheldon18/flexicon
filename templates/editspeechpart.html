@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h3>Edit Part of Speech</h3>
+<div class="row">
+    <form action="{{ url_for('update_speechpart', speechpart_id=speechpart._id) }}" method="POST" class="col s12">
+        
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">list</i>
+                <input id="part_of_speech" name="part_of_speech" type="text" class="validate" value="{{speechpart.part_of_speech}}">
+                <label for="part_of_speech">Updated part of speech</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s3">
+                <button class="btn waves-effect waves-light" type="submit" name="action">Submit Edit
+                    <i class="material-icons right">done</i>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

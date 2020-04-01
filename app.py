@@ -56,6 +56,45 @@ def delete_word(word_id):
     mongo.db.words.remove({'_id': ObjectId(word_id)})
     return redirect(url_for('home_page'))
 
+@app.route('/get_partofspeech')
+def get_partofspeech():
+    return render_template('partofspeech.html',
+    partofspeech=mongo.db.partofspeech.find())
+
+
+@app.route('/add_speechpart')
+def add_speechpart():
+    return render_template('addspeechpart.html')
+
+
+@app.route('/insert_speechpart', methods=['POST'])
+def insert_speechpart():
+    partofspeech = mongo.db.partofspeech
+    speechpart_doc = {'part_of_speech': request.form.get('part_of_speech')}
+    partofspeech.insert_one(speechpart_doc)
+    return redirect(url_for('get_partofspeech'))
+
+
+@app.route('/edit_speechpart/<speechpart_id>')
+def edit_speechpart(speechpart_id):
+    return render_template('editspeechpart.html', 
+    speechpart=mongo.db.partofspeech.find_one({'_id': ObjectId(speechpart_id)}))
+    
+    
+@app.route('/update_speechpart/<speechpart_id>', methods=["POST"])
+def update_speechpart(speechpart_id):
+    mongo.db.partofspeech.update(
+        {'_id': ObjectId(speechpart_id)},
+        {'part_of_speech': request.form.get('part_of_speech')})
+    
+    return redirect(url_for('get_partofspeech'))   
+
+
+@app.route('/delete_speechpart/<speechpart_id>')
+def delete_speechpart(speechpart_id):
+    mongo.db.partofspeech.remove({'_id': ObjectId(speechpart_id)})
+    return redirect(url_for('get_partofspeech'))
+
     
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
