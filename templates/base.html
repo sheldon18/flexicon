@@ -55,6 +55,10 @@
         $(document).ready(function() {
             $('.collapsible').collapsible();
             $('select').formSelect();
+                if ($('select').value() == "") {
+                    alert('Please choose an option');
+                    return false;
+                    }
             $('.sidenav').sidenav();
         });
 

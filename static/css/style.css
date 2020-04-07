@@ -1,5 +1,5 @@
 body {
-    background-color: #eed1ac;
+    background-color: #c1432e;
 }
 
 .btn_small {
@@ -21,52 +21,66 @@ body {
 }
 
 nav .brand-logo {
-    color: black;
+    color: #ffd7a3;
 }
 
 .nav-wrapper {
-    background-color: burlywood;
+    background-color: #4b6777;
 }
 
 .sidenav  {
-    background-color: burlywood;
+    background-color: #4b6777;
     font-family: 'Bitter', serif;
-    color: black;
+    color: #ffd7a3;
+    font-weight: bold;
+}
+
+.sidenav li > a {
+    background-color: #4b6777;
+    font-family: 'Bitter', serif;
+    color: #ffd7a3;
+    font-weight: bold;
 }
 
 h3 {
     font-family: 'Bitter', serif;
-    color: black;
+    color: #ffd7a3;
     text-align: center;
 }
 
 nav ul a {
     font-family: 'Bitter', serif;
-    color: black;
+    color: #ffd7a3;
+    font-weight: bold;
 }
 
 
 .collapsible-body, .collapsible-header {
-    background-color: #ffedd6;
+    background-color: #ffd7a3;
+    border-bottom: 1px dotted #c1432e;
 }
 
 .material-icons {
-    color: black;
+    color: #ffd7a3;
 }
 
 .btn {
-    background-color: burlywood !important;
-    color: black;
+    font-family: 'Bitter', serif;
+    font-weight: bold;
+    background-color: #ce9e62 !important;
+    color: #2c2c2c;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 2px 1px 2px rgba(0,0,0,0.12),0 1px 20px 0 rgba(0,0,0,0.2);
+    margin-left: 24px;
 }
 
 .btn_small {
-    background-color: #eed1ac !important;
+    background-color: #ce9e62 !important;
     font-size: 11px;
+    margin-left: 10px;
 }
 
 .footer a {
-    color: #a87b26;
+    color: #ffd7a3;
 }
 
 .about {
@@ -74,9 +88,14 @@ nav ul a {
     color: black;
 }
 
+h6 {
+   font-family: 'Bitter', serif;
+   color: #ffd7a3; 
+}
+
 h6 a {
    font-family: 'Bitter', serif;
-   color: black; 
+   color: #ffd7a3; 
    font-weight: bold;
 }
 
@@ -98,6 +117,7 @@ h6 a {
 }
 
 
+
 @media only screen and (max-width: 992px) {
   .brand-logo {
     font-family: 'Bitter', serif;
@@ -105,5 +125,7 @@ h6 a {
     margin-left: 0px;
 }
 }
+
+
 
 
