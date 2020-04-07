@@ -95,6 +95,10 @@ def delete_speechpart(speechpart_id):
     mongo.db.partofspeech.remove({'_id': ObjectId(speechpart_id)})
     return redirect(url_for('get_partofspeech'))
 
+
+@app.route('/about_page')
+def about_page():
+    return render_template("aboutflexicon.html")
     
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),

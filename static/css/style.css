@@ -1,5 +1,5 @@
 body {
-    background-color: white;
+    background-color: #eed1ac;
 }
 
 .btn_small {
@@ -13,3 +13,82 @@ body {
 .word_header {
     margin-top: 5px;
 }
+
+.brand-logo {
+    font-family: 'Bitter', serif;
+    font-weight: 700;
+    margin-left: 17px;
+}
+
+nav .brand-logo {
+    color: black;
+}
+
+.nav-wrapper {
+    background-color: burlywood;
+}
+
+.sidenav  {
+    background-color: burlywood;
+    font-family: 'Bitter', serif;
+    color: black;
+}
+
+h3 {
+    font-family: 'Bitter', serif;
+    color: black;
+    text-align: center;
+}
+
+nav ul a {
+    font-family: 'Bitter', serif;
+    color: black;
+}
+
+
+.collapsible-body, .collapsible-header {
+    background-color: #ffedd6;
+}
+
+.material-icons {
+    color: black;
+}
+
+.btn {
+    background-color: burlywood !important;
+    color: black;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 2px 1px 2px rgba(0,0,0,0.12),0 1px 20px 0 rgba(0,0,0,0.2);
+}
+
+.btn_small {
+    background-color: #eed1ac !important;
+    font-size: 11px;
+}
+
+.footer a {
+    color: #a87b26;
+}
+
+.about {
+    font-family: 'Bitter', serif;
+    color: black;
+}
+
+h6 a {
+   font-family: 'Bitter', serif;
+   color: black; 
+   font-weight: bold;
+}
+
+.speechpart_header {
+    margin-left: 10px;
+    margin-top: 6px;
+}
+
+
+.edit-delete {
+    margin-top: -17px;
+}
+
+
+
