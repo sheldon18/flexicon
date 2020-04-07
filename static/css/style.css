@@ -90,5 +90,20 @@ h6 a {
     margin-top: -17px;
 }
 
+.row .col.s4 {
+    width: 80%;
+    margin-left: -15px;
+    left: auto;
+    right: auto;
+}
+
+
+@media only screen and (max-width: 992px) {
+  .brand-logo {
+    font-family: 'Bitter', serif;
+    font-weight: 700;
+    margin-left: 0px;
+}
+}
 
 
