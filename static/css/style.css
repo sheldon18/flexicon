@@ -116,6 +116,10 @@ h6 a {
     right: auto;
 }
 
+#part_of_speech.validate {
+    border-color: #a62a15;
+}
+
 
 
 @media only screen and (max-width: 992px) {
