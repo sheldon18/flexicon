@@ -21,7 +21,7 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">list</i>
-                <select id="part_of_speech" name="part_of_speech" class="required">
+                <select id="part_of_speech" name="part_of_speech" class="required" required="true">
                   <option value="" disabled selected>Pick a type</option>
                   {% for part in partofspeech %}
                       <option value="{{part.part_of_speech}}">{{part.part_of_speech}}</option>
