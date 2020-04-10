@@ -12,6 +12,7 @@ body {
 
 .word_header {
     margin-top: 5px;
+    text-transform: lowercase;
 }
 
 .brand-logo {
@@ -48,6 +49,21 @@ h3 {
     text-align: center;
 }
 
+h5 {
+    font-family: 'Bitter', serif;
+    color: #ffd7a3;
+    text-align: center;
+    font-weight: bold;
+}
+
+.welcome {
+    font-family: 'Bitter', serif;
+    color: #ffd7a3;
+    text-align: center;
+    font-weight: bold;
+    font-size: 19px;
+}
+
 nav ul a {
     font-family: 'Bitter', serif;
     color: #ffd7a3;
@@ -81,6 +97,8 @@ nav ul a {
 
 .footer a {
     color: #ffd7a3;
+    position: relative;
+    bottom: -70px;
 }
 
 .about {

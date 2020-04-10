@@ -2,7 +2,12 @@
 {% block content %}
     
 <div class="row">
-<h3>Words</h3>  
+<h5>Welcome to Flexicon, a dictionary created by you.</h5>  
+<p class="welcome">Try it, add a word to our fun dictionary below
+</br>
+</br>
+</br>
+Check out some of the words already added...</p>
   <ul class="collapsible popout">
     {% for word in words %}
     <li>
@@ -42,19 +47,8 @@
 <div class="row">
     <a href="{{ url_for('add_word') }}" class="waves-effect waves-light btn">Add Word</a>
 </div> 
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
+
   
     
 {% endblock %}
 
-
-
-</br>
-</br>

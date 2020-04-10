@@ -17,8 +17,8 @@ mongo = PyMongo(app)
 @app.route('/')
 @app.route('/home_page')
 def home_page():
-    return render_template("index.html", 
-    words = mongo.db.words.find())
+    return render_template("index.html",
+    words = mongo.db.words.find().sort("word_name",1))
     
 @app.route('/add_word')
 def add_word():
@@ -103,6 +103,6 @@ def about_page():
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
         port=int(os.environ.get('PORT')),
-        debug=True)
+        debug=False)
         
       
