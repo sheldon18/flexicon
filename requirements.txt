@@ -2,7 +2,7 @@ ipython==7.13.0
 ipython-genutils==0.2.0
 Flask==1.1.1
 Flask-PyMongo==2.3.0
-Jinja2==2.11.1
+Jinja2==2.11.3
 MarkupSafe==1.1.1
 PyMongo==3.10.1
 Werkzeug==1.0.0
